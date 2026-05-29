@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/R-4.3+-276DC3?style=flat-square&logo=r&logoColor=white" alt="R 4.3+" />
   <img src="https://img.shields.io/badge/Shiny-1.10+-1a5cba?style=flat-square&logo=rstudioide&logoColor=white" alt="Shiny" />
   <img src="https://img.shields.io/badge/Plotly-2.x-3f4f75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly" />
+  <img src="https://img.shields.io/badge/ggplot2-3.5+-1f77b4?style=flat-square" alt="ggplot2" />
   <img src="https://img.shields.io/badge/Licencia-MIT-blue?style=flat-square" alt="MIT" />
 </p>
 
@@ -26,7 +27,7 @@
 - [Cómo redesplegar a shinyapps.io](#cómo-redesplegar-a-shinyappsio)
 - [Estructura del repositorio](#estructura-del-repositorio)
 - [Decisiones metodológicas clave](#decisiones-metodológicas-clave)
-- [Reproducibilidad y validación cruzada](#reproducibilidad-y-validación-cruzada)
+- [Reproducibilidad](#reproducibilidad)
 - [Limitaciones declaradas](#limitaciones-declaradas)
 - [Uso de inteligencia artificial](#uso-de-inteligencia-artificial)
 - [Autor y contexto académico](#autor-y-contexto-académico)
@@ -43,7 +44,7 @@ La aplicación se compone de cinco pestañas en secuencia narrativa **contexto �
 
 | Pestaña | Pregunta que responde |
 |---|---|
-| **Inicio** | KPIs generales y tres preguntas guía mapeadas a cada pestaña analítica |
+| **Inicio** | KPIs generales, tres preguntas guía y hallazgos principales |
 | **Crecimiento** | ¿Cómo varía el WAZ por edad, sexo y quintil de riqueza? |
 | **Estimulación** | ¿Qué brechas territoriales y socioeconómicas hay en el acceso a libros infantiles? |
 | **Involucramiento paterno** | ¿Cómo varía el IIP por quintil, región y educación materna? |
@@ -91,11 +92,10 @@ Este proyecto académico de la asignatura **Visualización de Datos** del **Más
 - **Manejo de datos:** dplyr, scales
 - **Paleta accesible:** Okabe-Ito (validada para personas con visión de color reducida)
 - **Despliegue:** shinyapps.io vía `rsconnect::deployApp()`
-- **Validación cruzada:** pipeline paralelo en Python (pandas) que reproduce KPIs
 
 ### Patrón de diseño
 
-La app sigue la **taxonomía de Shneiderman (1996)**: *Overview first* (KPIs + 3 preguntas guía en Inicio) → *Zoom & Filter* (filtros región / quintil / indicador) → *Details on Demand* (tooltips con n y valor por celda).
+La app sigue la **taxonomía de Shneiderman (1996)**: *Overview first* (KPIs + 3 preguntas guía + hallazgos principales en Inicio) → *Zoom & Filter* (filtros región / quintil / indicador) → *Details on Demand* (tooltips con n y valor por celda).
 
 ---
 
@@ -150,9 +150,9 @@ El script `deploy_limpio_shinyapps.R` aplica defensa en profundidad: copia los a
 
 ```
 PRA2-VisualizacionDeDatos/
-├── app.R                          # Aplicación Shiny (5 pestañas + 3 preguntas guía en Inicio)
+├── app.R                          # Aplicación Shiny (5 pestañas + 3 preguntas guía + hallazgos en Inicio)
 ├── R/
-│   ├── 00_config.R                # Paletas Okabe-Ito, helpers, weighted_avg defensivo
+│   ├── 00_config.R                # Paletas Okabe-Ito, helpers, weighted_avg
 │   ├── 01_preparacion_datos.R     # Lectura de microdatos y limpieza
 │   ├── 02_exploracion_calidad.R   # Calidad de datos y faltantes
 │   ├── 03_tablas_visualizacion.R  # Agregaciones ponderadas (con política n ≥ 25)
@@ -202,6 +202,12 @@ PRA2-VisualizacionDeDatos/
 
 ---
 
+## Reproducibilidad
+
+El pipeline R es enteramente scriptado y reproducible. Cada etapa (`R/01_*` a `R/03_*`) genera artefactos verificables en `data_processed/`. Los KPIs reportados (6 157 registros con peso muestral válido, WAZ medio ponderado 0,19, proporción de bajo peso 3,76 %, proporción con al menos un libro 63,11 % e IIP medio 1,26 sobre 6) se calculan directamente desde la base procesada y pueden recalcularse ejecutando `source("run_pipeline_completo.R")` en RStudio. El despliegue defensivo (`deploy_limpio_shinyapps.R`) verifica que `rsconnect` detecte todas las dependencias antes de publicar.
+
+---
+
 ## Limitaciones declaradas
 
 - **No causalidad**: las diferencias entre grupos describen asociaciones observadas en datos ponderados, no efectos causales.
@@ -245,5 +251,5 @@ Los datos originales MICS6 son propiedad de UNICEF y del Consejo Nacional de Coo
 ---
 
 <p align="center">
-  <sub>Construido en R · Publicado en shinyapps.io · Validado contra Python · Hecho para la UOC</sub>
+  <sub>Construido en R · Publicado en shinyapps.io · Hecho para la UOC</sub>
 </p>

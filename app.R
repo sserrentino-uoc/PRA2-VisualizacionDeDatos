@@ -76,9 +76,9 @@ agregar_crecimiento <- function(df) {
     dplyr::group_by(sexo, quintil_riqueza, edad_grupo) |>
     dplyr::summarise(
       n = sum(n, na.rm = TRUE),
-      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       waz_medio = weighted_avg(waz_medio, peso_muestral),
       prop_bajo_peso = weighted_avg(prop_bajo_peso, peso_muestral),
+      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       .groups = "drop"
     )
 }
@@ -89,8 +89,8 @@ agregar_estimulo <- function(df, region_input) {
     dplyr::group_by(region, quintil_riqueza, indicador, indicador_label) |>
     dplyr::summarise(
       n = sum(n, na.rm = TRUE),
-      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       valor = weighted_avg(valor, peso_muestral),
+      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       .groups = "drop"
     )
 }
@@ -100,9 +100,9 @@ agregar_iip <- function(df) {
     dplyr::group_by(quintil_riqueza, educ_madre) |>
     dplyr::summarise(
       n = sum(n, na.rm = TRUE),
-      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       iip_medio = weighted_avg(iip_medio, peso_muestral),
       iip_normalizado_medio = weighted_avg(iip_normalizado_medio, peso_muestral),
+      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       .groups = "drop"
     )
 }
@@ -112,8 +112,8 @@ agregar_iip_actividad <- function(df) {
     dplyr::group_by(quintil_riqueza, actividad) |>
     dplyr::summarise(
       n = sum(n, na.rm = TRUE),
-      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       prop_actividad = weighted_avg(prop_actividad, peso_muestral),
+      peso_muestral = sum(peso_muestral, na.rm = TRUE),
       .groups = "drop"
     )
 }

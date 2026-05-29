@@ -1,0 +1,92 @@
+"region","quintil_riqueza","educ_madre","n","peso_muestral","iip_medio","iip_normalizado_medio"
+"AMBA","Más pobre","Hasta Secundario incompleto",143,343.508030177263,1.19878673512446,0.199797789187411
+"AMBA","Más pobre","Secundario completo / Terciario o Universitario incompleto",41,100.780187937943,1.2160083554397,0.20266805923995
+"AMBA","Más pobre","Terciario completo",4,8.86641959019523,NA,NA
+"AMBA","Segundo","Hasta Secundario incompleto",127,341.664426086127,0.693410849975578,0.11556847499593
+"AMBA","Segundo","Secundario completo / Terciario o Universitario incompleto",98,256.398242698821,1.2130796084805,0.20217993474675
+"AMBA","Segundo","Terciario completo",8,11.6303474829155,NA,NA
+"AMBA","Medio","Hasta Secundario incompleto",68,130.598421061565,1.31487566882052,0.21914594480342
+"AMBA","Medio","Secundario completo / Terciario o Universitario incompleto",71,141.709367732409,1.1520953513905,0.192015891898416
+"AMBA","Medio","Terciario completo",17,27.7184167019514,NA,NA
+"AMBA","Cuarto","Hasta Secundario incompleto",32,31.0580112719225,1.18833026811487,0.198055044685812
+"AMBA","Cuarto","Secundario completo / Terciario o Universitario incompleto",80,137.725486863305,1.90127546093498,0.316879243489163
+"AMBA","Cuarto","Terciario completo",47,55.7932380349588,1.99053094199987,0.331755156999979
+"AMBA","Más rico","Hasta Secundario incompleto",24,51.6694898086076,NA,NA
+"AMBA","Más rico","No sabe / no responde",1,8.98496130958806,NA,NA
+"AMBA","Más rico","Secundario completo / Terciario o Universitario incompleto",81,110.854409559867,2.11827409271098,0.353045682118496
+"AMBA","Más rico","Terciario completo",104,148.14347634753,1.97376381838979,0.328960636398299
+"Cuyo","Más pobre","Hasta Secundario incompleto",122,65.3942654057498,0.744007300431395,0.124001216738566
+"Cuyo","Más pobre","Secundario completo / Terciario o Universitario incompleto",33,17.7350592107466,1.09740997406917,0.182901662344862
+"Cuyo","Más pobre","Terciario completo",4,1.84809896819338,NA,NA
+"Cuyo","Segundo","Hasta Secundario incompleto",114,58.297626222049,1.48743596440951,0.247905994068252
+"Cuyo","Segundo","Secundario completo / Terciario o Universitario incompleto",60,28.8093580657938,1.74697586824967,0.291162644708278
+"Cuyo","Segundo","Terciario completo",13,6.29065890609607,NA,NA
+"Cuyo","Medio","Hasta Secundario incompleto",135,60.5661620425947,0.929227731791211,0.154871288631869
+"Cuyo","Medio","Secundario completo / Terciario o Universitario incompleto",105,47.3226082865095,1.5870753726346,0.264512562105767
+"Cuyo","Medio","Terciario completo",18,4.68385445893667,NA,NA
+"Cuyo","Cuarto","Hasta Secundario incompleto",66,27.827520458802,1.38324399219464,0.230540665365773
+"Cuyo","Cuarto","Secundario completo / Terciario o Universitario incompleto",109,44.7382061680788,2.0377584652319,0.339626410871983
+"Cuyo","Cuarto","Terciario completo",43,14.2924062753656,2.90927628768107,0.484879381280178
+"Cuyo","Más rico","Hasta Secundario incompleto",24,11.294703624341,NA,NA
+"Cuyo","Más rico","Secundario completo / Terciario o Universitario incompleto",111,36.7833980075188,1.90959724288131,0.318266207146885
+"Cuyo","Más rico","Terciario completo",74,24.4277674098314,1.59275043919108,0.265458406531846
+"NEA","Más pobre","Hasta Secundario incompleto",439,254.440751717008,0.797212223407681,0.13286870390128
+"NEA","Más pobre","Secundario completo / Terciario o Universitario incompleto",191,118.411639872287,1.14135272356875,0.190225453928126
+"NEA","Más pobre","Terciario completo",32,13.7744514501686,2.07047917943654,0.345079863239423
+"NEA","Segundo","Hasta Secundario incompleto",94,49.375354760802,0.787409956722742,0.131234992787124
+"NEA","Segundo","Secundario completo / Terciario o Universitario incompleto",173,84.414251884635,1.18537814832043,0.197563024720072
+"NEA","Segundo","Terciario completo",60,22.8759016808421,2.05395607669975,0.342326012783292
+"NEA","Medio","Hasta Secundario incompleto",26,9.33796307297416,1.52790981844188,0.25465163640698
+"NEA","Medio","Secundario completo / Terciario o Universitario incompleto",96,37.2494213889629,2.24236366305604,0.373727277176007
+"NEA","Medio","Terciario completo",49,17.663418729696,1.46458379715159,0.244097299525264
+"NEA","Cuarto","Hasta Secundario incompleto",1,0.451187572181489,NA,NA
+"NEA","Cuarto","Secundario completo / Terciario o Universitario incompleto",6,1.18924479729607,NA,NA
+"NEA","Cuarto","Terciario completo",8,1.85466447271676,NA,NA
+"NEA","Más rico","Secundario completo / Terciario o Universitario incompleto",1,0.250470116448621,NA,NA
+"NOA","Más pobre","Hasta Secundario incompleto",242,238.925484283234,0.771422911013066,0.128570485168844
+"NOA","Más pobre","Secundario completo / Terciario o Universitario incompleto",86,78.8586049603877,0.853479611012531,0.142246601835422
+"NOA","Más pobre","Terciario completo",12,14.9345786151334,NA,NA
+"NOA","Segundo","Hasta Secundario incompleto",78,81.3760543707185,1.30482818512721,0.217471364187868
+"NOA","Segundo","Secundario completo / Terciario o Universitario incompleto",101,99.628533537656,0.877261030128384,0.146210171688064
+"NOA","Segundo","Terciario completo",17,9.73995848478685,NA,NA
+"NOA","Medio","Hasta Secundario incompleto",67,61.6438683610466,0.859743006484694,0.143290501080782
+"NOA","Medio","No sabe / no responde",1,2.00130275888858,NA,NA
+"NOA","Medio","Secundario completo / Terciario o Universitario incompleto",81,76.3994337026463,1.59614115355876,0.266023525593127
+"NOA","Medio","Terciario completo",34,44.3047707654244,1.82600914190298,0.30433485698383
+"NOA","Cuarto","Hasta Secundario incompleto",12,6.79716750555984,NA,NA
+"NOA","Cuarto","No sabe / no responde",1,0.369345690829219,NA,NA
+"NOA","Cuarto","Secundario completo / Terciario o Universitario incompleto",66,45.9610526730077,1.54821238327004,0.258035397211674
+"NOA","Cuarto","Terciario completo",36,28.2170813735301,2.3296006841974,0.388266780699566
+"NOA","Más rico","Hasta Secundario incompleto",4,1.18999076578319,NA,NA
+"NOA","Más rico","Secundario completo / Terciario o Universitario incompleto",24,18.0877879337271,NA,NA
+"NOA","Más rico","Terciario completo",28,22.6795691748506,1.03317998467035,0.172196664111725
+"Pampeana","Más pobre","Hasta Secundario incompleto",206,422.888878372111,0.916873931448223,0.152812321908037
+"Pampeana","Más pobre","Secundario completo / Terciario o Universitario incompleto",91,225.045661865863,0.958271888375534,0.159711981395922
+"Pampeana","Más pobre","Terciario completo",5,12.983180649755,NA,NA
+"Pampeana","Segundo","Hasta Secundario incompleto",130,218.259701096049,0.889223826521248,0.148203971086875
+"Pampeana","Segundo","Secundario completo / Terciario o Universitario incompleto",121,212.116094718198,1.21462286322556,0.202437143870926
+"Pampeana","Segundo","Terciario completo",24,34.6963532833359,NA,NA
+"Pampeana","Medio","Hasta Secundario incompleto",112,131.935889128735,1.16345816983658,0.193909694972764
+"Pampeana","Medio","Secundario completo / Terciario o Universitario incompleto",147,234.918387937547,1.58090115661345,0.263483526102242
+"Pampeana","Medio","Terciario completo",35,32.3076197145225,1.26275800739915,0.210459667899858
+"Pampeana","Cuarto","Hasta Secundario incompleto",46,46.8234371690341,0.648777706734972,0.108129617789162
+"Pampeana","Cuarto","Secundario completo / Terciario o Universitario incompleto",123,153.091400287274,1.4782064043796,0.246367734063266
+"Pampeana","Cuarto","Terciario completo",67,72.9534506059178,2.57176845841291,0.428628076402151
+"Pampeana","Más rico","Hasta Secundario incompleto",36,35.6711126579308,1.95841834052394,0.32640305675399
+"Pampeana","Más rico","Secundario completo / Terciario o Universitario incompleto",120,104.233521998599,1.94720382887528,0.324533971479213
+"Pampeana","Más rico","Terciario completo",138,122.074268321487,1.66347944807283,0.277246574678805
+"Patagonia","Más pobre","Hasta Secundario incompleto",30,15.9901401661431,0.23873360123431,0.0397889335390516
+"Patagonia","Más pobre","Secundario completo / Terciario o Universitario incompleto",7,2.10138679343419,NA,NA
+"Patagonia","Segundo","Hasta Secundario incompleto",40,22.5570688344062,1.11795505866273,0.186325843110455
+"Patagonia","Segundo","Secundario completo / Terciario o Universitario incompleto",15,7.84199750135703,NA,NA
+"Patagonia","Segundo","Terciario completo",3,0.718425077028985,NA,NA
+"Patagonia","Medio","Hasta Secundario incompleto",105,46.15543112931,0.942504863621265,0.157084143936878
+"Patagonia","Medio","No sabe / no responde",1,0.145947259064293,NA,NA
+"Patagonia","Medio","Secundario completo / Terciario o Universitario incompleto",66,28.5228699460117,0.851326504764254,0.141887750794042
+"Patagonia","Medio","Terciario completo",5,3.15273822628405,NA,NA
+"Patagonia","Cuarto","Hasta Secundario incompleto",87,41.1002007373451,0.500820890185358,0.0834701483642264
+"Patagonia","Cuarto","Secundario completo / Terciario o Universitario incompleto",137,52.6342723767669,1.17918862420474,0.196531437367457
+"Patagonia","Cuarto","Terciario completo",41,13.3185395114639,1.93422581214573,0.322370968690954
+"Patagonia","Más rico","Hasta Secundario incompleto",29,6.368707578759,1.67024390814749,0.278373984691249
+"Patagonia","Más rico","Secundario completo / Terciario o Universitario incompleto",90,34.3711562189687,1.49050938637916,0.248418231063193
+"Patagonia","Más rico","Terciario completo",57,22.2042281884812,1.68133293627854,0.280222156046423

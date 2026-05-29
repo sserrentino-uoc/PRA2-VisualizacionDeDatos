@@ -1,0 +1,19 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+rsconnect/
+renv/library/
+renv/staging/
+renv/python/
+renv/local/
+# Microdatos y bases individuales: no versionar ni publicar
+/data_raw/*
+!/data_raw/README.md
+/data_processed/base_pra2.*
+/data_processed/base_ch_analitica.*
+/python_validation/out/
+# Scratch local
+*.log
+.DS_Store
+Thumbs.db

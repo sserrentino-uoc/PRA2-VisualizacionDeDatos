@@ -1,0 +1,8 @@
+"dimension","problema_detectado","decision_metodologica","impacto_en_visualizacion"
+"Antropometría","WAZ2 contiene valores fuera de rango y WAZFLAG marca errores","Usar solo WAZ2 cuando WAZFLAG == 0 y WAZ2 < 90","Evita conclusiones basadas en mediciones inválidas"
+"Peso/talla","Códigos especiales como 99/999 representan no respuesta o medición no válida","Convertir códigos especiales a NA","Evita distorsionar medias y distribuciones"
+"Estimulación","Variables EC5 son de selección múltiple con códigos A/B/X/Y y ?","Construir indicadores binarios específicos para padre y madre","Permite medir involucramiento paterno de forma trazable"
+"IIP","La participación paterna no es una medida directa de calidad del vínculo","Definir IIP como suma exploratoria de seis actividades declaradas","Mantiene una interpretación descriptiva, no causal"
+"Privacidad","Los microdatos contienen información individual anonimizada","Publicar la app usando tablas agregadas y no microdatos crudos","Reduce exposición innecesaria y mejora rendimiento"
+"Ponderación","MICS6 es una encuesta compleja con ponderadores","Calcular promedios y proporciones usando chweight","Mejora la representatividad descriptiva de los indicadores"
+"Interpretación","Las asociaciones pueden confundirse con causalidad","Agregar notas metodológicas y lecturas guiadas en la app","Evita sobreinterpretación de diferencias entre grupos"

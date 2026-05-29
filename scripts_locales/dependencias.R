@@ -1,0 +1,15 @@
+install.packages(c(
+  "shiny",
+  "httpuv",
+  "bslib",
+  "thematic",
+  "tidyverse",
+  "haven",
+  "labelled",
+  "janitor",
+  "readxl",
+  "plotly",
+  "DT",
+  "scales"
+))
+.rs.restartR()

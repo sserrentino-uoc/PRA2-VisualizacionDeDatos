@@ -1,0 +1,23 @@
+variable_original,variable_derivada,descripcion,uso_en_pra2
+HH1,hh1,Número de conglomerado,Identificación y trazabilidad del diseño muestral
+HH2,hh2,Número de hogar,Identificación del hogar
+LN,ln,Número de línea del niño/a,Identificación del niño/a dentro del hogar
+HL4,sexo,Sexo del niño/a,Control obligatorio en crecimiento
+CAGE,edad_meses,Edad del niño/a en meses,Control obligatorio por edad
+AN8,peso_kg,Peso en kilogramos,Dato antropométrico original
+AN11,talla_cm,Talla en centímetros,Dato antropométrico original
+WAZ2,waz_oms,Z-score OMS de peso para la edad,Indicador principal de crecimiento
+WAZFLAG,waz_oms,Bandera de validez antropométrica,Filtro de calidad del WAZ
+STRATUM,region,Región,Análisis territorial
+WINDEX5,quintil_riqueza,Quintil de riqueza,Control socioeconómico obligatorio
+MELEVEL,educ_madre,Máximo nivel educativo de la madre,Segmentación para IIP
+FELEVEL,educ_padre,Máximo nivel educativo del padre,Contexto familiar complementario
+EC1,libros_n / tiene_libros,Número de libros infantiles,Entorno de estimulación temprana
+EC2A/EC2B/EC2C,juguetes/materiales,Disponibilidad de juguetes y objetos,Entorno de aprendizaje
+EC5AB,padre_leyo,Padre leyó libros,Componente IIP
+EC5BB,padre_conto,Padre contó cuentos,Componente IIP
+EC5CB,padre_canto,Padre cantó canciones,Componente IIP
+EC5DB,padre_llevo_fuera,Padre llevó fuera,Componente IIP
+EC5EB,padre_jugo,Padre jugó,Componente IIP
+EC5FB,padre_nombro,Padre nombró/contó/dibujó,Componente IIP
+CHWEIGHT,chweight,Ponderador niños/as 0-4,Estimaciones descriptivas ponderadas

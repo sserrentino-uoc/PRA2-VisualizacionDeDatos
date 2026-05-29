@@ -1,0 +1,15 @@
+# Evitar despliegue accidental de archivos no runtime si se usa Publish manual
+renv.lock
+renv/
+.Rprofile
+.Rproj.user/
+data_raw/
+data_processed/*.rds
+data_processed/base*.csv
+data_processed/base*.rds
+python_validation/
+R/01_preparacion_datos.R
+R/02_exploracion_calidad.R
+R/03_tablas_visualizacion.R
+run_pipeline_completo.R
+MANIFEST_SHA256.txt

@@ -1,0 +1,5 @@
+source("R/00_config.R")
+source("R/01_preparacion_datos.R")
+source("R/02_exploracion_calidad.R")
+source("R/03_tablas_visualizacion.R")
+shiny::runApp()

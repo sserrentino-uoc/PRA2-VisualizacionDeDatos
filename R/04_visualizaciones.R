@@ -3,11 +3,8 @@
 # Funciones de visualización
 # =========================================================
 
-# Paleta Okabe-Ito. El quintil "Más rico" usa "#D55E00" (bermellón) en lugar
-# del gris "#999999" original, para evitar que el extremo del gradiente
-# socioeconómico se lea como ausencia de dato y mejorar la accesibilidad
-# para personas con visión de color reducida. Debe quedar sincronizada con
-# pal_quintil de R/00_config.R.
+# Paleta Okabe-Ito sincronizada con pal_quintil de R/00_config.R.
+# Accesible para personas con visión de color reducida.
 pal_quintil <- c(
   "Más pobre" = "#E69F00",
   "Segundo"   = "#009E73",
@@ -26,10 +23,10 @@ pal_educ <- c(
 orden_quintiles <- c("Más pobre", "Segundo", "Medio", "Cuarto", "Más rico")
 orden_edades <- c("0-5", "6-11", "12-23", "24-35", "36-47", "48-59")
 
-# Política de NA: las filas con n por debajo del umbral (por defecto 25)
-# o con waz_medio = NA se ocultan visualmente, pero las líneas se preservan
-# uniendo los puntos válidos contiguos. Cuando la tabla queda totalmente vacía
-# se devuelve un placeholder explícito en lugar de un panel en blanco.
+# Política de incertidumbre para el grafico de crecimiento: las celdas con
+# menos observaciones que el umbral se ocultan visualmente, pero las lineas
+# se preservan uniendo los puntos validos contiguos. Si todas las celdas
+# quedan vacias, se muestra un placeholder explicito.
 N_MIN_CRECIMIENTO <- 25
 
 plot_crecimiento <- function(df, n_min = N_MIN_CRECIMIENTO) {
@@ -226,9 +223,8 @@ plot_estimulo <- function(df, region_input = "Todas") {
   plotly::ggplotly(p, tooltip = "text")
 }
 
-# Mismo umbral que en R/03_tablas_visualizacion.R. Defensa en profundidad:
-# si la tabla llegara sin filtrar (regeneracion manual fuera del pipeline),
-# el grafico vuelve a aplicar la politica de incertidumbre.
+# Mismo umbral que en R/03_tablas_visualizacion.R: el grafico aplica la
+# politica de incertidumbre incluso si la tabla llegara sin filtrar.
 N_MIN_IIP <- 25
 
 plot_iip <- function(df, n_min = N_MIN_IIP) {
@@ -243,7 +239,7 @@ plot_iip <- function(df, n_min = N_MIN_IIP) {
   }
 
   df$quintil_riqueza <- safe_levels(df$quintil_riqueza, orden_quintiles)
-  # Reaplicar umbral por robustez: oculta visualmente celdas con n bajo.
+  # Oculta visualmente celdas con n por debajo del umbral.
   df$iip_medio_plot <- ifelse(is.na(df$n) | df$n < n_min, NA_real_, df$iip_medio)
 
   if (all(is.na(df$iip_medio_plot))) {

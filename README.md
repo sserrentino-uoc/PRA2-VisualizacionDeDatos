@@ -168,17 +168,21 @@ PRA2-VisualizacionDeDatos/
 │   ├── calidad_variables.csv
 │   ├── decisiones_limpieza.csv
 │   └── diccionario_variables.csv
+├── metadata/
+│   └── diccionario_variables_pra2.csv  # Diccionario extendido del proyecto
 ├── www/
 │   └── styles.css                 # CSS de la app
-├── python_validation/             # Pipeline paralelo en pandas
-├── docs/                          # Anexos académicos
+├── python_validation/             # Pipeline paralelo en pandas para validación cruzada
+├── renv/                          # Configuración renv (activate.R, settings.json)
 ├── dependencias.R                 # Instalación de paquetes
 ├── run_app_local.R                # Driver local
 ├── run_pipeline_completo.R        # Driver del pipeline completo
-├── deploy_limpio_shinyapps.R      # Despliegue defensivo
+├── deploy.R                       # Despliegue estándar
+├── deploy_limpio_shinyapps.R      # Despliegue defensivo (recomendado)
 ├── validate_runtime_files.R       # Verificación previa al deploy
 ├── DESCRIPTION                    # Metadata R
 ├── PRA2.Rproj                     # Proyecto RStudio
+├── renv.lock                      # Lockfile de dependencias
 ├── LICENSE                        # MIT
 └── README.md                      # Este archivo
 ```
@@ -216,7 +220,7 @@ El proyecto incluye un **pipeline independiente en Python** (`python_validation/
 
 ## Uso de inteligencia artificial
 
-Durante el desarrollo se utilizó **ChatGPT (OpenAI, 2026)** como herramienta de apoyo limitada, conforme a la guía UOC sobre citación de IA y a los criterios fijados por la consigna. Detalle por apartado disponible en la **Tabla 9 del informe final**. Todas las salidas generadas por IA fueron revisadas, adaptadas y validadas por el autor. **No se introdujeron datos personales, confidenciales ni protegidos en la herramienta de IA.**
+Durante el desarrollo se utilizó **ChatGPT (OpenAI, 2026)** como herramienta de apoyo limitada, conforme a la guía UOC sobre citación de IA y a los criterios fijados por la consigna. El detalle por apartado se documenta en el informe final entregado a la asignatura. Todas las salidas generadas por IA fueron revisadas, adaptadas y validadas por el autor. **No se introdujeron datos personales, confidenciales ni protegidos en la herramienta de IA.**
 
 ---
 

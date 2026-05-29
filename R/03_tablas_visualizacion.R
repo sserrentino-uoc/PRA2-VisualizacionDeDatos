@@ -18,10 +18,8 @@ base_pra2 <- readRDS(base_path)
 base_valid_weight <- base_pra2 |>
   dplyr::filter(!is.na(peso_muestral), peso_muestral > 0)
 
-# IMPORTANTE: el orden importa. peso_muestral debe sobrescribirse DESPUES
-# de calcular las metricas ponderadas; en caso contrario dplyr reemplaza
-# el vector de pesos por un escalar (sum) antes de pasarlo a weighted_avg,
-# que entonces recicla mal y devuelve NA para casi todas las celdas.
+# Las metricas ponderadas se calculan antes de sobrescribir peso_muestral
+# para que weighted_avg reciba el vector original de pesos en cada grupo.
 tabla_crecimiento <- base_valid_weight |>
   dplyr::group_by(region, sexo, quintil_riqueza, edad_grupo) |>
   dplyr::summarise(
@@ -96,18 +94,11 @@ tabla_estimulo <- dplyr::bind_rows(
 ) |>
   dplyr::filter(!is.na(region), !is.na(quintil_riqueza))
 
-# IMPORTANTE: idem comentario de tabla_crecimiento. peso_muestral se
-# sobrescribe al final del summarise para que weighted_avg reciba el
-# vector original de pesos en cada grupo.
-#
-# Política de incertidumbre (alineada con §4.3 del informe):
-# - Las celdas con n < N_MIN_IIP se conservan estructuralmente, pero
-#   los valores agregados se devuelven como NA para evitar lecturas
-#   sobre subgrupos minoritarios (caso tipico: "No sabe / no responde"
-#   en quintiles extremos que arrojaba un IIP saturado por outliers).
-# - La capa de visualizacion (plot_iip) reaplica el mismo umbral por
-#   robustez, de modo que el filtro funciona incluso si la tabla se
-#   recalcula manualmente sin el umbral.
+# Política de incertidumbre para el IIP: las celdas con menos de
+# N_MIN_IIP observaciones se conservan en la tabla pero sus valores
+# agregados se devuelven como NA para no comunicar lecturas basadas
+# en subgrupos muy minoritarios. La capa de visualizacion reaplica
+# el mismo umbral por robustez.
 N_MIN_IIP <- 25
 
 tabla_iip <- base_valid_weight |>

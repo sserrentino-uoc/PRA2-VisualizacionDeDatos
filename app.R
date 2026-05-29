@@ -242,7 +242,7 @@ ui <- navbarPage(
         selectInput("region_iip", "Región", choices = regiones, selected = "Todas"),
         checkboxGroupInput("quintil_iip", "Quintil de riqueza", choices = quintiles, selected = quintiles),
         helpText("IIP = suma de seis actividades paternas: leer, contar cuentos, cantar, llevar fuera, jugar y nombrar/contar/dibujar."),
-        helpText("Las celdas con n < 25 se ocultan para evitar lecturas sobre subgrupos con muestra muy pequeña (por ejemplo, 'No sabe / no responde' en quintiles extremos).")
+        helpText("Las celdas con n < 25 se ocultan para evitar lecturas sobre subgrupos con muestra muy pequeña.")
       ),
       mainPanel(
         width = 9,

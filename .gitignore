@@ -13,6 +13,9 @@ renv/local/
 /data_processed/base_pra2.*
 /data_processed/base_ch_analitica.*
 /python_validation/out/
+# Materiales academicos internos: no versionar
+/Entrega/
+/teorico/
 # Scratch local
 *.log
 .DS_Store

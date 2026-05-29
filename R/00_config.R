@@ -36,17 +36,15 @@ orden_quintiles <- c("Más pobre", "Segundo", "Medio", "Cuarto", "Más rico")
 orden_edades <- c("0-5", "6-11", "12-23", "24-35", "36-47", "48-59")
 orden_sexo <- c("Varón", "Mujer")
 
-# Paletas consistentes y suficientemente contrastadas --------------------
-# Paleta Okabe-Ito (validada para daltonismo). Se reemplaza el gris "#999999"
-# original del quintil "Más rico" por "#D55E00" (bermellón) para evitar que
-# el extremo superior se lea como ausencia de dato y para reforzar el orden
-# perceptual del gradiente socioeconómico.
+# Paleta Okabe-Ito para quintiles de riqueza.
+# Validada para personas con visión de color reducida y con contraste suficiente
+# sobre fondo claro. Debe mantenerse sincronizada con pal_quintil de R/04_visualizaciones.R.
 pal_quintil <- c(
   "Más pobre" = "#E69F00",   # naranja
   "Segundo"   = "#009E73",   # verde azulado
   "Medio"     = "#0072B2",   # azul
   "Cuarto"    = "#CC79A7",   # rosa-violeta
-  "Más rico"  = "#D55E00"    # bermellón (sustituye #999999 para WCAG/Okabe-Ito)
+  "Más rico"  = "#D55E00"    # bermellón
 )
 
 pal_educ <- c(
@@ -79,13 +77,10 @@ int_fmt <- function(x) {
   as.character(as.integer(round(as.numeric(x)[1], 0)))
 }
 
-# weighted_avg: media ponderada robusta y defensiva.
-# - Si value y weight tienen distinta longitud, se intenta reciclar el peso
-#   (caso comun: peso constante o mal pasado como escalar). Solo se recicla
-#   si la longitud del peso es 1; en cualquier otro mismatch se devuelve NA
-#   para no producir resultados silenciosamente incorrectos.
-# - Filtra NAs en value y weight de forma alineada antes de delegar en
-#   stats::weighted.mean.
+# Media ponderada con manejo explícito de NA y longitudes.
+# Si weight es escalar (longitud 1) se recicla al tamaño de value; si las
+# longitudes no son alineables se devuelve NA en vez de un resultado
+# silenciosamente incorrecto.
 weighted_avg <- function(value, weight) {
   if (length(weight) == 1L && length(value) > 1L) {
     weight <- rep(weight, length(value))

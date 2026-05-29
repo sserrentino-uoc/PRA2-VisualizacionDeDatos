@@ -20,3 +20,4 @@ renv/local/
 *.log
 .DS_Store
 Thumbs.db
+crear_repo_y_push.ps1

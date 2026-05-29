@@ -72,7 +72,7 @@ Este proyecto académico de la asignatura **Visualización de Datos** del **Más
 
 | Indicador | Valor |
 |---|---:|
-| Registros con peso muestral válido | **6 157** |
+| Registros con peso muestral válido | **6157** |
 | WAZ medio ponderado (z-score OMS de peso para la edad) | **0,19** |
 | Proporción ponderada de bajo peso (WAZ < −2) | **3,76 %** |
 | Proporción con al menos un libro infantil | **63,11 %** |
@@ -204,7 +204,7 @@ PRA2-VisualizacionDeDatos/
 
 ## Reproducibilidad
 
-El pipeline R es enteramente scriptado y reproducible. Cada etapa (`R/01_*` a `R/03_*`) genera artefactos verificables en `data_processed/`. Los KPIs reportados (6 157 registros con peso muestral válido, WAZ medio ponderado 0,19, proporción de bajo peso 3,76 %, proporción con al menos un libro 63,11 % e IIP medio 1,26 sobre 6) se calculan directamente desde la base procesada y pueden recalcularse ejecutando `source("run_pipeline_completo.R")` en RStudio. El despliegue defensivo (`deploy_limpio_shinyapps.R`) verifica que `rsconnect` detecte todas las dependencias antes de publicar.
+El pipeline R es enteramente scriptado y reproducible. Cada etapa (`R/01_*` a `R/03_*`) genera artefactos verificables en `data_processed/`. Los KPIs reportados (6157 registros con peso muestral válido, WAZ medio ponderado 0,19, proporción de bajo peso 3,76 %, proporción con al menos un libro 63,11 % e IIP medio 1,26 sobre 6) se calculan directamente desde la base procesada y pueden recalcularse ejecutando `source("run_pipeline_completo.R")` en RStudio. El despliegue defensivo (`deploy_limpio_shinyapps.R`) verifica que `rsconnect` detecte todas las dependencias antes de publicar.
 
 ---
 

@@ -203,12 +203,6 @@ PRA2-VisualizacionDeDatos/
 
 ---
 
-## Reproducibilidad y validación cruzada
-
-El proyecto incluye un **pipeline independiente en Python** (`python_validation/`) que reproduce los KPIs y tablas agregadas a partir de los mismos microdatos, usando `pandas` con el mismo criterio de ponderación. La coincidencia numérica entre R y Python es exacta para los KPIs generales (6 157 registros, WAZ 0,1876, bajo peso 3,76 %, libros 63,11 %, IIP 1,2556).
-
----
-
 ## Limitaciones declaradas
 
 - **No causalidad**: las diferencias entre grupos describen asociaciones observadas en datos ponderados, no efectos causales.

@@ -172,7 +172,6 @@ PRA2-VisualizacionDeDatos/
 │   └── diccionario_variables_pra2.csv  # Diccionario extendido del proyecto
 ├── www/
 │   └── styles.css                 # CSS de la app
-├── python_validation/             # Pipeline paralelo en pandas para validación cruzada
 ├── renv/                          # Configuración renv (activate.R, settings.json)
 ├── dependencias.R                 # Instalación de paquetes
 ├── run_app_local.R                # Driver local

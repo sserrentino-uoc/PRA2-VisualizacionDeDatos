@@ -27,15 +27,7 @@ runtime_files <- c(
   "data_processed/tabla_iip_actividad.csv",
   "data_processed/calidad_variables.csv",
   "data_processed/decisiones_limpieza.csv",
-  "data_processed/diccionario_variables.csv",
-  "docs/DECLARACION_USO_IA.md",
-  "docs/INSTRUCCIONES_SUBIDA_SHINYAPPS.md",
-  "docs/GUION_VIDEO_4_6_MIN.md",
-  "docs/REVISION_CODIGO_FINAL.md",
-  "docs/VALIDACION_PYTHON_VS_R.md",
-  "docs/RESULTADOS_Y_CONCLUSIONES.md",
-  "docs/ANEXO_METODOLOGICO_APA7.md",
-  "docs/CHECKLIST_ENTREGA.md"
+  "data_processed/diccionario_variables.csv"
 )
 
 missing_files <- runtime_files[!file.exists(runtime_files)]

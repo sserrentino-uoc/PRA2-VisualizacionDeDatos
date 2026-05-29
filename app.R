@@ -175,6 +175,21 @@ ui <- navbarPage(
             )
           )
         )
+      ),
+      fluidRow(
+        column(
+          width = 12,
+          lectura_guiada(
+            "Hallazgos principales",
+            "Tres patrones sustantivos emergen al explorar los datos. Son una lectura descriptiva, no causal.",
+            c(
+              "El acceso a libros infantiles muestra la brecha socioeconómica más nítida del conjunto, con desigualdad interna especialmente alta en NEA y Patagonia.",
+              "El bajo peso se concentra en la franja 0–5 meses más que en quintiles: la vulnerabilidad antropométrica es etaria antes que económica.",
+              "El involucramiento paterno regional no sigue mecánicamente el ingreso: Patagonia, más rica que NEA y NOA en promedio, presenta el IIP regional más bajo.",
+              "Las actividades paternas más frecuentes son físicas y recreativas; las narrativas (lectura, cuentos, canto), que la literatura asocia a mayor impacto en lenguaje, son las menos frecuentes."
+            )
+          )
+        )
       )
     )
   ),
@@ -193,8 +208,14 @@ ui <- navbarPage(
       mainPanel(
         width = 9,
         card_text("Crecimiento infantil y desigualdad socioeconómica", plotlyOutput("plot_crecimiento", height = "560px")),
+        card_text(
+          "Lectura del autor",
+          p("El WAZ medio general es 0,19 (cercano al patrón OMS = 0) y el bajo peso general es 3,76 %, lo que sugiere una cobertura nutricional comparativamente buena en agregado."),
+          p("Sin embargo, en el grupo 0–5 meses la proporción de bajo peso trepa a 11,77 %: la vulnerabilidad antropométrica está concentrada en los primeros meses de vida y no se distribuye uniformemente por edad."),
+          p("Las diferencias por quintil son visibles pero menos marcadas que en otras dimensiones; en crecimiento, la edad (especialmente 0–5 meses) ordena más fuertemente que el ingreso.")
+        ),
         lectura_guiada(
-          "Lectura guiada",
+          "Cómo explorar esta pestaña",
           "El WAZ representa el z-score de peso para la edad según referencia OMS. Un valor cercano a 0 indica proximidad al patrón de referencia; valores negativos sugieren menor peso relativo para la edad.",
           c(
             "Compará primero las diferencias entre quintiles de riqueza.",
@@ -220,8 +241,14 @@ ui <- navbarPage(
       mainPanel(
         width = 9,
         card_text("Entorno de estimulación temprana", plotlyOutput("plot_estimulo", height = "560px")),
+        card_text(
+          "Lectura del autor",
+          p("El acceso a libros pasa de 46,2 % en el quintil más pobre a 86,3 % en el más rico: una brecha de 40 puntos porcentuales, la más nítida del conjunto del proyecto."),
+          p("Más allá del orden agregado regional (AMBA 69,3 % vs NEA 43,2 %), lo más relevante es la magnitud de la desigualdad interna: en NEA la brecha entre el quintil más pobre y el más rico alcanza 68,1 puntos (de 31,9 % a 100 %), y en Patagonia 67,8 (de 17,5 % a 85,3 %). En AMBA, en cambio, la brecha interna es 25,6."),
+          p("Las regiones que en agregado tienen el menor acceso son las que internamente concentran la mayor desigualdad. Esto sugiere que las políticas redistributivas no deberían diseñarse de manera uniforme.")
+        ),
         lectura_guiada(
-          "Lectura guiada",
+          "Cómo explorar esta pestaña",
           "Esta sección compara el entorno de estimulación temprana según región y quintil de riqueza. Los indicadores seleccionables muestran disponibilidad de libros, juguetes y objetos usados para jugar.",
           c(
             "Observá si los indicadores aumentan a medida que mejora el quintil de riqueza.",
@@ -248,16 +275,21 @@ ui <- navbarPage(
         width = 9,
         card_text("Índice de involucramiento paterno", plotlyOutput("plot_iip", height = "520px")),
         card_text("Actividades paternas específicas", plotlyOutput("plot_iip_actividad", height = "520px")),
+        card_text(
+          "Lectura del autor",
+          p("El IIP medio es 1,26 sobre 6 y crece de 0,96 en el quintil más pobre a 1,84 en el más rico: la corresponsabilidad declarada aumenta con el ingreso, casi duplicándose entre extremos."),
+          p("Sin embargo, el patrón regional no es estrictamente económico: Patagonia (1,07), una región con mayor PIB per cápita promedio que NEA y NOA, presenta el IIP regional más bajo. Cuyo (1,45) lidera. Esto sugiere que el ingreso no agota la explicación; hay una capa cultural y territorial relevante."),
+          p("Entre actividades específicas, las dos más frecuentes son llevar al niño fuera (30,8 %) y jugar (28,2 %), de carácter físico-recreativo. Las menos frecuentes son contar cuentos (14,7 %), cantar (16,6 %) y leer (16,8 %), todas narrativas y verbales. La literatura sobre primera infancia identifica estas últimas como las de mayor impacto en desarrollo del lenguaje y lectoescritura."),
+          p(tags$em("Limitación importante:"), " las respuestas del IIP son declaradas y pueden estar sujetas a sesgo de memoria, deseabilidad social y no respuesta. Además, la pregunta MICS6 captura corresponsabilidad declarada en familias heteroparentales y no agota la diversidad de formas familiares.")
+        ),
         lectura_guiada(
-          "Lectura guiada",
+          "Cómo explorar esta pestaña",
           "El Índice de Involucramiento Paterno resume la participación declarada del padre en seis actividades de estimulación temprana: lectura, narración, canto, salidas, juego y actividades de nombrar, contar o dibujar.",
           c(
             "Compará el IIP medio entre quintiles de riqueza.",
             "Observá si la educación materna aparece asociada a diferencias en la participación paterna declarada.",
             "Analizá las actividades específicas para identificar cuáles concentran mayor o menor participación.",
-            "El índice es exploratorio: resume prácticas reportadas, pero no mide calidad del vínculo ni intensidad del cuidado.",
-            "Las respuestas son declaradas y pueden estar sujetas a sesgo de memoria, deseabilidad social o no respuesta.",
-            "La pregunta MICS6 sobre actividades paternas captura corresponsabilidad declarada en familias heteroparentales y no agota la diversidad de formas familiares; el IIP debe leerse en esa clave."
+            "El índice es exploratorio: resume prácticas reportadas, pero no mide calidad del vínculo ni intensidad del cuidado."
           )
         )
       )

@@ -210,7 +210,7 @@ ui <- navbarPage(
         card_text("Crecimiento infantil y desigualdad socioeconómica", plotlyOutput("plot_crecimiento", height = "560px")),
         card_text(
           "Lectura del autor",
-          p("El WAZ medio general es 0,19 (cercano al patrón OMS = 0) y el bajo peso general es 3,76 %, lo que sugiere una cobertura nutricional comparativamente buena en agregado."),
+          p("El WAZ medio general es 0,19 (cercano al patrón OMS = 0) y el bajo peso general es 3,76 %, lo que indica que no se observa un déficit agregado severo en este indicador antropométrico. La afirmación se restringe a WAZ: no contempla stunting (HAZ), micronutrientes ni seguridad alimentaria."),
           p("Sin embargo, en el grupo 0–5 meses la proporción de bajo peso trepa a 11,77 %: la vulnerabilidad antropométrica está concentrada en los primeros meses de vida y no se distribuye uniformemente por edad."),
           p("Las diferencias por quintil son visibles pero menos marcadas que en otras dimensiones; en crecimiento, la edad (especialmente 0–5 meses) ordena más fuertemente que el ingreso.")
         ),
@@ -274,11 +274,12 @@ ui <- navbarPage(
       mainPanel(
         width = 9,
         card_text("Índice de involucramiento paterno", plotlyOutput("plot_iip", height = "520px")),
+        card_text("IIP medio por región", plotlyOutput("plot_iip_region", height = "360px")),
         card_text("Actividades paternas específicas", plotlyOutput("plot_iip_actividad", height = "520px")),
         card_text(
           "Lectura del autor",
           p("El IIP medio es 1,26 sobre 6 y crece de 0,96 en el quintil más pobre a 1,84 en el más rico: la corresponsabilidad declarada aumenta con el ingreso, casi duplicándose entre extremos."),
-          p("Sin embargo, el patrón regional no es estrictamente económico: Patagonia (1,07), una región con mayor PIB per cápita promedio que NEA y NOA, presenta el IIP regional más bajo. Cuyo (1,45) lidera. Esto sugiere que el ingreso no agota la explicación; hay una capa cultural y territorial relevante."),
+          p("Sin embargo, el patrón regional no es estrictamente económico: Patagonia (1,07), una región con mayor PIB per cápita promedio que NEA y NOA, presenta el IIP regional más bajo. Cuyo (1,45) lidera. Esto sugiere que el ingreso no agota la explicación y plantea como hipótesis la posible presencia de factores culturales y territoriales que no se exploran con estos datos."),
           p("Entre actividades específicas, las dos más frecuentes son llevar al niño fuera (30,8 %) y jugar (28,2 %), de carácter físico-recreativo. Las menos frecuentes son contar cuentos (14,7 %), cantar (16,6 %) y leer (16,8 %), todas narrativas y verbales. La literatura sobre primera infancia identifica estas últimas como las de mayor impacto en desarrollo del lenguaje y lectoescritura."),
           p(tags$em("Limitación importante:"), " las respuestas del IIP son declaradas y pueden estar sujetas a sesgo de memoria, deseabilidad social y no respuesta. Además, la pregunta MICS6 captura corresponsabilidad declarada en familias heteroparentales y no agota la diversidad de formas familiares.")
         ),
@@ -390,6 +391,12 @@ server <- function(input, output, session) {
       df
     }
   })
+
+  iip_region_filtrado <- reactive({
+    # Usa siempre todas las regiones (el filtro de region_iip no aplica aqui)
+    # pero respeta el filtro de quintiles.
+    filter_by_region_quintil(tabla_iip, "Todas", input$quintil_iip)
+  })
   
   iip_actividad_filtrado <- reactive({
     df <- filter_by_region_quintil(tabla_iip_actividad, input$region_iip, input$quintil_iip)
@@ -411,7 +418,11 @@ server <- function(input, output, session) {
   output$plot_iip <- renderPlotly({
     plot_iip(iip_filtrado())
   })
-  
+
+  output$plot_iip_region <- renderPlotly({
+    plot_iip_region(iip_region_filtrado())
+  })
+
   output$plot_iip_actividad <- renderPlotly({
     plot_iip_actividad(iip_actividad_filtrado())
   })

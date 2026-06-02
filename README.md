@@ -47,7 +47,7 @@ La aplicación se compone de cinco pestañas en secuencia narrativa **contexto �
 | **Inicio** | KPIs generales, tres preguntas guía y hallazgos principales |
 | **Crecimiento** | ¿Cómo varía el WAZ por edad, sexo y quintil de riqueza? |
 | **Estimulación** | ¿Qué brechas territoriales y socioeconómicas hay en el acceso a libros infantiles? |
-| **Involucramiento paterno** | ¿Cómo varía el IIP por quintil, región y educación materna? |
+| **Involucramiento paterno** | ¿Cómo varía el IIP por quintil de riqueza, educación materna y región (incluye gráfico agregado de IIP medio por región)? |
 | **Metodología** | Calidad de datos, decisiones de limpieza, diccionario y declaración de uso de IA |
 
 ---
@@ -156,7 +156,7 @@ PRA2-VisualizacionDeDatos/
 │   ├── 01_preparacion_datos.R     # Lectura de microdatos y limpieza
 │   ├── 02_exploracion_calidad.R   # Calidad de datos y faltantes
 │   ├── 03_tablas_visualizacion.R  # Agregaciones ponderadas (con política n ≥ 25)
-│   └── 04_visualizaciones.R       # Funciones plot_* con política de NA
+│   └── 04_visualizaciones.R       # Funciones plot_* con política de NA (plot_estimulo construido con plot_ly heatmap; plot_iip_region nuevo)
 ├── data_raw/                      # Microdatos (ignorado por git, solo README)
 │   └── README.md                  # Instrucciones para obtener los microdatos
 ├── data_processed/                # Tablas agregadas consumidas por la app
@@ -194,7 +194,7 @@ PRA2-VisualizacionDeDatos/
 |---|---|---|
 | 1 | Indicadores antropométricos **provistos por MICS6** (`WAZ2`, `WAZFLAG`), no recalculados contra tablas OMS externas | Evita reimplementación divergente del cálculo oficial documentado en el manual MICS |
 | 2 | Ponderador muestral `chweight` aplicado en **todos** los agregados | Coherente con el diseño muestral complejo de la encuesta |
-| 3 | Política de incertidumbre con umbral **n ≥ 25** | Evita conclusiones sobre subgrupos con muestra insuficiente; aplicada en pipeline y en plots |
+| 3 | Política de incertidumbre con umbral **n ≥ 25** | Evita conclusiones sobre subgrupos con muestra insuficiente. Aplicada en pipeline (`tabla_iip` se entrega con celdas n < 25 anuladas) y en plots de visualización: `plot_iip`, `plot_iip_region` y `plot_estimulo` (heatmap y vista por región específica) ocultan celdas/quintiles por debajo del umbral. |
 | 4 | Publicación de **tablas agregadas** (no microdatos) en la app | Reduce exposición individual y mejora rendimiento |
 | 5 | Paleta **Okabe-Ito** sincronizada (quintil "Más rico" = `#D55E00`, no gris) | Accesibilidad cromática para personas con visión de color reducida |
 | 6 | Honestidad gráfica: escalas distintas para proporciones (0–1, %) y media de libros (escala libre) | Evita representar cantidades absolutas como porcentajes |

@@ -241,12 +241,19 @@ Los datos originales MICS6 son propiedad de UNICEF y del Consejo Nacional de Coo
 
 ## Referencias
 
-- Alcalde, I., y Minguillón, J. (2020). *Introducción a la visualización de la información.* Fundació UOC.
-- Few, S. (2011). *Data visualization for human perception.* En *The Encyclopedia of Human-Computer Interaction.* Interaction Design Foundation.
+- Alcalde, I., y Minguillón, J. (2020). *Introducción a la visualización de la información.* Fundació Universitat Oberta de Catalunya.
+- Few, S. (2011). *Data visualization for human perception.* En M. Soegaard y R. F. Dam (Eds.), *The Encyclopedia of Human-Computer Interaction* (2.ª ed.). Interaction Design Foundation.
+- Giménez, X. (s. f.). *Aspectos a tener en cuenta para la práctica de visualización de datos* (J. Minguillón Alfonso, Coord.). Universitat Oberta de Catalunya.
 - Lumley, T. (2010). *Complex surveys: A guide to analysis using R.* Wiley. [DOI](https://doi.org/10.1002/9780470580066)
-- Shneiderman, B. (1996). The eyes have it: A task by data type taxonomy for information visualizations. *IEEE Symposium on Visual Languages*, 336–343. [DOI](https://doi.org/10.1109/VL.1996.545307)
-- UNICEF (2020). *Multiple Indicator Cluster Survey 6: Argentina 2019–2020* [Dataset]. UNICEF MICS Programme. https://mics.unicef.org/surveys
-- World Health Organization (2006). *WHO Child Growth Standards.* WHO. https://www.who.int/toolkits/child-growth-standards
+- Minguillón Alfonso, J. (2021). *Guía de lecturas en el ámbito de la visualización de datos.* Fundació Universitat Oberta de Catalunya.
+- Minguillón Alfonso, J. (2024). *Introducción a la preparación de datos.* Universitat Oberta de Catalunya.
+- OpenAI (2026). *ChatGPT* [Modelo de lenguaje grande]. https://chat.openai.com
+- Shneiderman, B. (1996). The eyes have it: A task by data type taxonomy for information visualizations. *Proceedings of the IEEE Symposium on Visual Languages*, 336–343. [DOI](https://doi.org/10.1109/VL.1996.545307)
+- Tufte, E. R. (1983). *The visual display of quantitative information.* Graphics Press.
+- UNICEF (2020). *Encuesta Nacional de Niñas, Niños y Adolescentes 2019–2020 (MICS6 Argentina)* [Conjunto de datos]. Fondo de las Naciones Unidas para la Infancia y Consejo Nacional de Coordinación de Políticas Sociales. https://mics.unicef.org/surveys
+- UNICEF (2023). *Estado mundial de la infancia 2023: Para cada niño, vacunación.* https://www.unicef.org/es/informes/estado-mundial-infancia-2023
+- World Health Organization (2006). *WHO Child Growth Standards: Length/height-for-age, weight-for-age, weight-for-length, weight-for-height and body mass index-for-age: Methods and development.* WHO. https://www.who.int/toolkits/child-growth-standards
+- World Wide Web Consortium (2024). *Web Content Accessibility Guidelines (WCAG) 2.2.* W3C Recommendation. https://www.w3.org/TR/WCAG22/
 
 ---
 

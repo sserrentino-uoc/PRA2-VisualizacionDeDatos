@@ -244,7 +244,7 @@ ui <- navbarPage(
         card_text(
           "Lectura del autor",
           p("El acceso a libros pasa de 46,2 % en el quintil más pobre a 86,3 % en el más rico: una brecha de 40 puntos porcentuales, la más nítida del conjunto del proyecto."),
-          p("Más allá del orden agregado regional (AMBA 69,3 % vs NEA 43,2 %), lo más relevante es la magnitud de la desigualdad interna: en NEA la brecha entre el quintil más pobre y el más rico alcanza 68,1 puntos (de 31,9 % a 100 %), y en Patagonia 67,8 (de 17,5 % a 85,3 %). En AMBA, en cambio, la brecha interna es 25,6."),
+          p("Más allá del orden agregado regional (AMBA 69,3 % vs NEA 43,2 %), lo más relevante es la magnitud de la desigualdad interna. En Patagonia la brecha entre el quintil más pobre y el más rico alcanza 67,8 puntos (de 17,5 % a 85,3 %). En NEA, el quintil Más rico tiene n = 1 y se omite del heatmap por aplicación del umbral n ≥ 25; no se reporta una brecha agregada para esa región. En AMBA, en cambio, la brecha interna es 25,6 puntos."),
           p("Las regiones que en agregado tienen el menor acceso son las que internamente concentran la mayor desigualdad. Esto sugiere que las políticas redistributivas no deberían diseñarse de manera uniforme.")
         ),
         lectura_guiada(

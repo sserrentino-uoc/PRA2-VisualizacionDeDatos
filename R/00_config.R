@@ -55,26 +55,40 @@ pal_educ <- c(
 )
 
 # Formato numérico solicitado: sin separador de miles y coma decimal ------
+# Vectorizado: cada elemento se formatea por separado. Si x es de longitud 1
+# o 0, mantiene el comportamiento escalar original. NA -> "s/d" por elemento.
 num_fmt <- function(x, digits = 2) {
-  if (length(x) == 0 || all(is.na(x))) return("s/d")
-  out <- format(
-    round(as.numeric(x)[1], digits),
-    nsmall = digits,
-    scientific = FALSE,
-    trim = TRUE,
-    big.mark = ""
-  )
-  gsub("\\.", ",", out)
+  if (length(x) == 0) return(character(0))
+  x_num <- suppressWarnings(as.numeric(x))
+  out <- vapply(x_num, function(v) {
+    if (is.na(v)) return("s/d")
+    s <- format(round(v, digits), nsmall = digits, scientific = FALSE,
+                trim = TRUE, big.mark = "")
+    gsub("\\.", ",", s)
+  }, character(1))
+  out
 }
 
 pct_fmt <- function(x, digits = 2) {
-  if (length(x) == 0 || all(is.na(x))) return("s/d")
-  paste0(num_fmt(as.numeric(x)[1] * 100, digits), " %")
+  if (length(x) == 0) return(character(0))
+  x_num <- suppressWarnings(as.numeric(x))
+  out <- vapply(x_num, function(v) {
+    if (is.na(v)) return("s/d")
+    s <- format(round(v * 100, digits), nsmall = digits, scientific = FALSE,
+                trim = TRUE, big.mark = "")
+    paste0(gsub("\\.", ",", s), " %")
+  }, character(1))
+  out
 }
 
 int_fmt <- function(x) {
-  if (length(x) == 0 || all(is.na(x))) return("s/d")
-  as.character(as.integer(round(as.numeric(x)[1], 0)))
+  if (length(x) == 0) return(character(0))
+  x_num <- suppressWarnings(as.numeric(x))
+  out <- vapply(x_num, function(v) {
+    if (is.na(v)) return("s/d")
+    as.character(as.integer(round(v, 0)))
+  }, character(1))
+  out
 }
 
 # Media ponderada con manejo explícito de NA y longitudes.

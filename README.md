@@ -194,7 +194,7 @@ PRA2-VisualizacionDeDatos/
 |---|---|---|
 | 1 | Indicadores antropométricos **provistos por MICS6** (`WAZ2`, `WAZFLAG`), no recalculados contra tablas OMS externas | Evita reimplementación divergente del cálculo oficial documentado en el manual MICS |
 | 2 | Ponderador muestral `chweight` aplicado en **todos** los agregados | Coherente con el diseño muestral complejo de la encuesta |
-| 3 | Política de incertidumbre con umbral **n ≥ 25** | Evita conclusiones sobre subgrupos con muestra insuficiente. Aplicada en pipeline (`tabla_iip` se entrega con celdas n < 25 anuladas) y en plots de visualización: `plot_iip`, `plot_iip_region` y `plot_estimulo` (heatmap y vista por región específica) ocultan celdas/quintiles por debajo del umbral. |
+| 3 | Política de incertidumbre con umbral **n ≥ 25** | Evita conclusiones sobre subgrupos con muestra insuficiente. Aplicada en pipeline (`tabla_iip` se entrega con celdas n < 25 anuladas) y en cuatro funciones de visualización: `plot_crecimiento`, `plot_estimulo` (heatmap y vista por región específica), `plot_iip` y `plot_iip_region` ocultan celdas/quintiles por debajo del umbral. |
 | 4 | Publicación de **tablas agregadas** (no microdatos) en la app | Reduce exposición individual y mejora rendimiento |
 | 5 | Paleta **Okabe-Ito** sincronizada (quintil "Más rico" = `#D55E00`, no gris) | Accesibilidad cromática para personas con visión de color reducida |
 | 6 | Honestidad gráfica: escalas distintas para proporciones (0–1, %) y media de libros (escala libre) | Evita representar cantidades absolutas como porcentajes |

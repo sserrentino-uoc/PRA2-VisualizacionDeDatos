@@ -219,7 +219,7 @@ El pipeline R es enteramente scriptado y reproducible. Cada etapa (`R/01_*` a `R
 
 ## Uso de inteligencia artificial
 
-Durante el desarrollo de esta segunda parte de la práctica se utilizó ChatGPT (OpenAI, 2026) como herramienta de apoyo acotado para organizar el informe, mejorar la claridad de la redacción académica, revisar la coherencia entre informe, aplicación, código y guion, orientar puntualmente aspectos de legibilidad y estructura del código R/Shiny, y asistir en el formato de referencias y citas.
+Durante el desarrollo de esta segunda parte de la práctica se utilizó ChatGPT (OpenAI, 2026) como herramienta de apoyo acotado para organizar el informe, mejorar la claridad de la redacción académica, revisar la coherencia entre informe, aplicación, código, orientar puntualmente aspectos de legibilidad y estructura del código R/Shiny, y asistir en el formato de referencias y citas.
 
 Todas las salidas generadas por IA fueron revisadas, adaptadas y validadas por el autor. La selección del enfoque, la interpretación de los resultados, la depuración del código, las decisiones metodológicas y la versión final de la visualización son responsabilidad exclusiva del autor.
 
